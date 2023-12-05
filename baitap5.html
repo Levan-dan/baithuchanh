@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <input id="nhap1" type="number" placeholder="nhap vao so dau">
+        <input id="nhap2" type="number" placeholder="nhap vao so tiep">
+        <button  onclick="tong()">cộng</button>
+        <button  onclick="hieu()">trừ</button>
+        <button  onclick="tich()">nhân</button>
+        <button  onclick="thuong()">chia</button>
+        <button onclick="laydu()">chia lấy dư</button>
+
+    <div style="display: flex; align-items: center; ">
+        <h4>result:</h4>
+        <p id="result" style="margin-left: 15px;">0</p>
+    </div>  
+</body>
+</html>
+
+<script>
+    function tong(){
+        let number1 = document.getElementById("nhap1").value;
+        let number2 = document.getElementById("nhap2").value;
+        let result = +number1 + +number2;
+
+        document.getElementById("result").innerHTML = result;
+    }
+    
+    function hieu(){
+        let number1 = document.getElementById("nhap1").value;
+        let number2 = document.getElementById("nhap2").value;
+        let result = +number1 - +number2;
+
+        document.getElementById("result").innerHTML = result;
+    }
+
+    function tich(){
+        let number1 = document.getElementById("nhap1").value;
+        let number2 = document.getElementById("nhap2").value;
+        let result = +number1 * +number2;
+
+        document.getElementById("result").innerHTML = result;
+    }
+
+    function thuong(){
+        let number1 = document.getElementById("nhap1").value;
+        let number2 = document.getElementById("nhap2").value;
+        let result = + number1 / +number2;
+
+        document.getElementById("result").innerHTML = result;
+
+    }
+
+    function laydu(){
+        let number1 = document.getElementById("nhap1").value;
+        let number2 = document.getElementById("nhap2").value;
+        let result = +number1 % +number2;
+
+        document.getElementById("result").innerHTML = result;
+
+    }
+</script>

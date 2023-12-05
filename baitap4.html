@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>From currency</p>
+    <select name="" id="demodau">
+        <option >VND</option>
+        <option >USD</option>
+    </select>
+    <p>to currency</p>
+    <select name="" id="demosau">
+        <option >VND</option>
+        <option >USD</option>
+    </select>
+    <p>Amount</p>
+    <input type="text" id="democuoi">
+
+    <button onclick="hien()" type="button">Convert</button>
+
+    <p id="ketqua"></p>
+</body>
+</html>
+<script>
+    function hien() {
+        var a = document.getElementById("demodau").value;
+        var b =  document.getElementById("demosau").value;
+        var c = document.getElementById("democuoi").value;
+        var ketqua;
+
+        if (a == "VND" && b  == "USD") {
+            ketqua = "ket qua :" + (c/23000) + "$";
+        }
+        else if  (a == "USD" && b  == "VND") {
+            ketqua  = "ket qua :" + (c*23000) + "VND";
+        }
+        else if (a == "VND"){
+            ketqua = "ket qua :" + (c) + "VND";
+        }
+        else if (a == "USD"){
+            ketqua = "ket qua :" + (c) + "USD";
+        }
+
+        document.getElementById("ketqua").innerHTML = ketqua ;
+    }
+     
+</script>
